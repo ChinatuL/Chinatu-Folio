@@ -1,0 +1,376 @@
+:root {
+    --col-black-100: #171414;
+    --col-black-200: #1c1818;
+    --col-gray: #4d4242;
+    --col-white-100: #fff;
+    --col-white-200: #d1c7c7;
+    --clr-orange: #cb450c;
+    --font-family: "Montserrat", system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+        "Helvetica Neue", sans-serif;
+    --transition-ease: all 0.3s ease-in-out;
+    --transition-slide: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.montserrat-semibold {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+body {
+    background-color: var(--col-black-100);
+    color: var(--col-white-100);
+    font-family: var(--font-family);
+    width: 100%;
+}
+
+h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--col-white-100);
+    transition: var(--transition-ease);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 4rem;
+    background-color: var(--col-black-200);
+}
+
+.nav {
+    width: 40%;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+}
+
+.nav-link:hover {
+    color: var(--clr-orange);
+}
+
+.hero {
+    height: calc(100vh - 53px);
+}
+
+.hero-line {
+    position: absolute;
+    width: 1px;
+    height: calc(100vh - 53px);
+    background-color: var(--col-gray);
+}
+
+.hero-email,
+.hero-role,
+.hero-intro,
+.hero-contact,
+.line,
+.hero-socials {
+    position: absolute;
+    z-index: 10;
+}
+
+.hero-line1 {
+    left: 30%;
+}
+
+.hero-line2 {
+    left: 45%;
+}
+
+.hero-line3 {
+    left: 60%;
+}
+
+.hero-line4 {
+    left: 75%;
+}
+
+.hero-email {
+    left: 1rem;
+    bottom: 3rem;
+}
+
+.hero-role {
+    right: 10%;
+    bottom: 10%;
+    font-size: 5rem;
+}
+
+.hero-intro {
+    left: 50%;
+    bottom: 40%;
+}
+
+.hero-contact {
+    transform: rotate(90deg);
+    right: 0;
+    top: 30%;
+}
+
+.line {
+    right: 2.6rem;
+    top: 40%;
+    width: 1px;
+    height: 3rem;
+    background-color: var(--col-white-100);
+}
+
+.hero-socials {
+    top: 55%;
+    right: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.hero-socials a {
+    transition: var(--transition-ease);
+}
+
+.hero-socials a:hover {
+    color: var(--clr-orange);
+}
+
+/* ABOUT */
+
+.section-title {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.section-about {
+    display: flex;
+    align-items: center;
+    padding: 2rem 6rem;
+}
+
+.section-about p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding-bottom: 1rem;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.section-about-img {
+    width: 70%;
+    font-size: 3rem;
+}
+.section-about-img img {
+    width: 120px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+.section-about-description {
+    align-self: flex-end;
+    width: 40%;
+}
+
+/* STACK */
+.skills-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skills-image svg {
+    width: 120px;
+    height: 120px;
+    cursor: pointer;
+}
+
+/* WORKS */
+
+.section-works .section-title {
+    padding: 3rem 1rem;
+}
+
+.works-container {
+    display: grid;
+}
+
+.work {
+    position: relative;
+}
+
+.work-link {
+    transition: var(--transition-ease);
+}
+
+.work-link:hover {
+    color: var(--clr-orange);
+}
+
+.work-title {
+    font-weight: 400;
+    font-size: 3.5rem;
+    padding: 4rem 1rem;
+    letter-spacing: 0px;
+    transition: var(--transition-slide);
+}
+
+.divider {
+    width: 100%;
+    height: 1px;
+    background-color: var(--col-gray);
+}
+
+.work-image {
+    display: none;
+    position: absolute;
+    z-index: 15;
+    top: -4rem;
+    right: 2rem;
+}
+
+.work-link:hover .work-title {
+    padding: 4rem 0 4rem 2.5rem;
+}
+
+.work-link:hover + .work-image {
+    display: block;
+}
+
+/* CONTACT */
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 3rem;
+    gap: 2rem;
+    text-align: center;
+}
+
+.contact-container-heading {
+    font-size: 7rem;
+    letter-spacing: 0px;
+    line-height: 0.9;
+    padding-bottom: 1rem;
+}
+
+.contact-container-subheading {
+    font-size: 1.3rem;
+    width: 50ch;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+.contact-btn {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    border: 1px solid var(--col-gray);
+    padding: 2rem 0;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.contact-link {
+  width: 40%;
+  border-top: 1px solid var(--col-gray);
+  padding-top: 1.2rem;
+}
+
+.contact-link a{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact-link p {
+  text-align: start;
+}
+
+.social-site {
+  font-size: 1.3rem;
+}
+
+.social-site-username {
+  padding-top: 0.5rem;
+  color: var(--col-gray);
+  font-size: 0.8rem;
+}
+
+/* FOOTER */
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+  color: var(--col-white-200);
+}
+
+/* .montserrat-<uniquifier> {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
