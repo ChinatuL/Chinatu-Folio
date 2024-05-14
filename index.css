@@ -370,7 +370,6 @@ a {
 }
 
 .contact-btn {
-    display: block;
     width: 80%;
     margin: 0 auto;
     border: 1px solid var(--col-gray);
@@ -385,6 +384,7 @@ a {
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    overflow: hidden;
 }
 
 .contact-link {

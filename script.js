@@ -1,4 +1,7 @@
+gsap.registerPlugin(ScrollTrigger);
+
 let tl = gsap.timeline();
+
 tl.from(".header", {
     duration: 0.5,
     delay: 0.5,
@@ -58,3 +61,70 @@ tl.from(".header", {
         { duration: 2.0, yPercent: 100, opacity: 0, ease: "elastic" },
         "2"
     );
+
+gsap.utils.toArray(".section-title").forEach((title) => {
+    gsap.from(title, {
+        duration: 0.5,
+        opacity: 0,
+        y: 20,
+        scrollTrigger: title,
+    });
+});
+
+gsap.from(".section-about-img", {
+    duration: 3,
+    y: 50,
+    opacity: 0,
+    delay: 0.5,
+    ease: "expo",
+    scrollTrigger: ".about-container",
+});
+
+gsap.from(".section-about-description", {
+    duration: 3,
+    x: 50,
+    opacity: 0,
+    letterSpacing: "0",
+    delay: 0.5,
+    ease: "expo",
+    scrollTrigger: ".about-container",
+});
+
+gsap.utils.toArray(".work").forEach((work) => {
+    gsap.from(work, {
+        duration: 1,
+        xPercent: -50,
+        opacity: 0,
+        delay: 0.5,
+        ease: "expo",
+        scrollTrigger: work,
+    });
+});
+
+gsap.from(
+    ".contact-container-heading, .contact-container-subheading, .contact-btn",
+    {
+        duration: 1,
+        opacity: 0,
+        y: 50,
+        stagger: 1,
+        delay: 0.5,
+        scrollTrigger: ".contact-container",
+    }
+);
+
+gsap.from(".contact-link-linkedin", {
+    duration: 1,
+    opacity: 0,
+    xPercent: -50,
+    delay: 0.5,
+    scrollTrigger: ".contact-links",
+});
+
+gsap.from(".contact-link-twitter", {
+    duration: 1,
+    opacity: 0,
+    xPercent: 50,
+    delay: 0.5,
+    scrollTrigger: ".contact-links",
+});
