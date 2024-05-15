@@ -90,15 +90,16 @@ gsap.from(".section-about-description", {
     scrollTrigger: ".about-container",
 });
 
-gsap.utils.toArray(".work").forEach((work) => {
-    gsap.from(work, {
-        duration: 1,
-        xPercent: -50,
-        opacity: 0,
-        delay: 0.5,
-        ease: "expo",
-        scrollTrigger: work,
-    });
+const worksEl = document.querySelector(".works-container");
+gsap.from(worksEl.children, {
+    duration: 1,
+    xPercent: -50,
+    opacity: 0,
+    delay: 0.5,
+    stagger: {
+        amount: 1,
+    },
+    scrollTrigger: ".works-container",
 });
 
 gsap.from(
