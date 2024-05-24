@@ -73,7 +73,7 @@ gsap.utils.toArray(".section-title").forEach((title) => {
 
 gsap.from(".section-about-img", {
     duration: 3,
-    y: 50,
+    y: -50,
     opacity: 0,
     delay: 0.5,
     ease: "expo",
@@ -82,7 +82,7 @@ gsap.from(".section-about-img", {
 
 gsap.from(".section-about-description", {
     duration: 3,
-    x: 50,
+    y: 50,
     opacity: 0,
     letterSpacing: "0",
     delay: 0.5,
@@ -105,10 +105,10 @@ gsap.from(worksEl.children, {
 gsap.from(
     ".contact-container-heading, .contact-container-subheading, .contact-btn",
     {
-        duration: 1,
+        duration: 1.5,
         opacity: 0,
         y: 50,
-        stagger: 1,
+        stagger: 0.5,
         delay: 0.5,
         scrollTrigger: ".contact-container",
     }
@@ -118,14 +118,14 @@ gsap.from(".contact-link-linkedin", {
     duration: 1,
     opacity: 0,
     xPercent: -50,
-    delay: 0.5,
-    scrollTrigger: ".contact-links",
+    delay: 2,
+    scrollTrigger: ".contact-container",
 });
 
 gsap.from(".contact-link-twitter", {
     duration: 1,
     opacity: 0,
     xPercent: 50,
-    delay: 0.5,
-    scrollTrigger: ".contact-links",
+    delay: 2,
+    scrollTrigger: ".contact-container",
 });

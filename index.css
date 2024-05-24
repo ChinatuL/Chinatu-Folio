@@ -32,10 +32,14 @@ html {
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     background-color: var(--col-black-100);
     color: var(--col-white-100);
     font-family: var(--font-family);
     width: 100%;
+    /* max-width: 1300px; */
+    /* margin: 0 auto; */
 }
 
 h1 {
@@ -75,7 +79,6 @@ a {
     display: flex;
     flex-direction: column;
     width: 100%;
-    min-height: 100vh;
 }
 
 .header {
@@ -103,7 +106,12 @@ a {
 }
 
 .hero {
+    display: flex;
+    justify-content: center;
     height: calc(100vh - 53px);
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
 }
 
 .hero-line {
@@ -195,6 +203,7 @@ a {
 
 .section-about {
     display: flex;
+    flex-direction: column;
     align-items: center;
     padding: 2rem 6rem;
 }
@@ -208,11 +217,14 @@ a {
 .about-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 1rem;
     width: 100%;
+    margin-block: 4rem;
 }
 
 .section-about-img {
-    width: 70%;
+    width: 80%;
     font-size: 3rem;
 }
 .section-about-img img {
@@ -223,8 +235,8 @@ a {
 }
 
 .section-about-description {
-    align-self: flex-end;
-    width: 40%;
+    width: 80%;
+    text-wrap: balance;
 }
 
 /* STACK */
@@ -306,10 +318,6 @@ a {
     transition: var(--transition-ease);
 }
 
-.work-link:hover {
-    color: var(--clr-orange);
-}
-
 .work-title {
     font-weight: 400;
     font-size: 3.5rem;
@@ -332,16 +340,19 @@ a {
     right: 2rem;
 }
 
+.work-link:hover {
+    color: var(--clr-orange);
+}
+
 .work-link:hover .work-title {
     padding: 4rem 0 4rem 2.5rem;
 }
 
-.work-link:hover + .work-image {
+.work-link:hover .work-image {
     display: block;
 }
 
 .work-image:hover {
-    display: block;
     cursor: pointer;
 }
 
@@ -355,7 +366,7 @@ a {
 }
 
 .contact-container-heading {
-    font-size: 7rem;
+    font-size: 3.5rem;
     letter-spacing: 0px;
     line-height: 0.9;
     padding-bottom: 1rem;
@@ -430,10 +441,3 @@ a {
     padding: 2rem 0;
     color: var(--col-white-200);
 }
-
-/* .montserrat-<uniquifier> {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: <weight>;
-  font-style: normal;
-} */
