@@ -2,6 +2,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 let tl = gsap.timeline();
 
+gsap.to(".body", { autoAlpha: 1 });
+
 tl.from(".header", {
     duration: 0.5,
     delay: 0.5,
